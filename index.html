@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love! 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>🎉 Happy Birthday, My Love! 💖</h1>
+    <p>Click the surprises to reveal how much you're loved! 💕</p>
+  </div>
+
+  <!-- Floating Balloons -->
+  <div class="balloons">
+    <div class="balloon red"></div>
+    <div class="balloon blue"></div>
+    <div class="balloon yellow"></div>
+    <div class="balloon pink"></div>
+  </div>
+
+  <!-- Surprise Buttons -->
+  <div class="surprises">
+    <button class="surprise-btn" data-popup="message-popup">💌 Love Note</button>
+    <button class="surprise-btn" data-popup="photo-popup">📸 Memories</button>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h2>Our Beautiful Journey Together</h2>
+    <div class="timeline-container">
+      <div class="timeline-item">
+        <img src="meet.jpg" alt="First Meeting">
+        <p>We met for the first time and my heart knew it found its home. 💕</p>
+      </div>
+      <div class="timeline-item">
+        <img src="trip.jpg" alt="First Trip">
+        <p>Our first adventure together. I knew then, we'd explore the world as one. 🌍</p>
+      </div>
+      <div class="timeline-item">
+        <img src="anniversary.jpg" alt="Anniversary">
+        <p>Our first anniversary. A year filled with endless love and joy. 🥰</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popups -->
+  <div id="message-popup" class="popup hidden">
+    <p class="popup-text">You are my sunshine, my rock, and my forever. Thank you for being you. 💕</p>
+    <button class="close-btn">Close</button>
+  </div>
+
+  <div id="photo-popup" class="popup hidden">
+    <img src="cowgirl.jpg" alt="Memories" class="popup-image">
+    <p class="popup-text">Here's to our beautiful journey together. I can't wait to make more memories with you! 📸</p>
+    <button class="close-btn">Close</button>
+  </div>
+
+<!-- Fireworks -->
+<div class="footer">
+    <button id="fireworks-btn">🎆 Watch the Sky Light Up! 🎆</button>
+    <canvas id="fireworks-canvas" class="hidden"></canvas>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+ 

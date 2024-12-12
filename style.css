@@ -1,0 +1,232 @@
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cursive', sans-serif;
+    text-align: center;
+    color: #4a4a4a;
+    background: linear-gradient(to bottom, #ffdee9, #b5fffc);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    color: #ff69b4;
+    margin-top: 20px;
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+  }
+  
+  /* Balloons */
+  .balloons {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    animation: floatBalloon 6s infinite;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: gray;
+    transform: translateX(-50%);
+  }
+  
+  /* Balloon Colors */
+  .red { background: #ff6b6b; left: 10%; animation-delay: 0s; }
+  .blue { background: #6bafff; left: 40%; animation-delay: 2s; }
+  .yellow { background: #fff56b; left: 70%; animation-delay: 4s; }
+  .pink { background: #ff6bf6; left: 85%; animation-delay: 1s; }
+ 
+   /* Popups */
+   .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .popup-text {
+    font-size: 1.2em;
+    margin: 15px 0;
+  }
+  
+  .popup-image {
+    max-width: 300px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+ 
+  /* Timeline Section */
+  .timeline {
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #ff69b4;
+  }
+  
+  .timeline-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .timeline-item {
+    min-width: 250px;
+    background: #ffe5ec;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .timeline-item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .timeline-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #4a4a4a;
+  }
+  
+  /* Fireworks Canvas */
+  #fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes floatBalloon {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-800px); }
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5em;
+    }
+  
+    .header p {
+      font-size: 1em;
+    }
+  
+    .surprise-btn {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  
+    .popup {
+      width: 90%;
+      max-width: none;
+    }
+  
+    .balloons {
+      height: 150px;
+    }
+  
+    .balloon {
+      width: 50px;
+      height: 70px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header h1 {
+      font-size: 2em;
+    }
+  
+    .header p {
+      font-size: 0.9em;
+    }
+  
+    .surprise-btn {
+      font-size: 0.9em;
+      padding: 6px 12px;
+    }
+  
+    .timeline-container {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .timeline-item {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .balloons {
+      height: 100px;
+    }
+  
+    .balloon {
+      width: 40px;
+      height: 50px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-width: 768px) {
+    .timeline-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  
